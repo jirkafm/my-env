@@ -1,0 +1,14 @@
+# This is Git's per-user configuration file.
+[user]
+	name = jirkafm
+	email = jiri.kaplan@email.cz
+
+[color]
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
+    grep = auto
+
+[log]
+    decorate = full 
