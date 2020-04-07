@@ -68,7 +68,7 @@ ZSH_THEME="mrtazz"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(docker colored-man-pages zsh-syntax-highlighting ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
