@@ -18,3 +18,5 @@ set termencoding=utf-8                  " use utf-8 everywhere
 
 set history=500                         " number of command lines stored in the history tables
 set undolevels=500                      " number of levels of undo
+
+syntax on
