@@ -18,3 +18,6 @@ export PATH
 # User specific aliases and functions
 HISTSIZE=-1
 HISTFILESIZE=-1
+
+LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
+LESS=' -R '

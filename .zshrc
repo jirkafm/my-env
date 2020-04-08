@@ -97,3 +97,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
+LESS=' -R '
