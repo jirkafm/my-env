@@ -21,3 +21,6 @@ HISTFILESIZE=-1
 
 LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
 LESS=' -R '
+
+# Aliases
+alias f="find . -iname "
