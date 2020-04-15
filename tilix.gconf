@@ -1,0 +1,27 @@
+[/]
+quake-height-percent=50
+quake-hide-headerbar=false
+quake-specific-monitor=0
+terminal-title-show-when-single=false
+terminal-title-style='small'
+window-style='disable-csd-hide-toolbar'
+
+[keybindings]
+app-preferences='<Primary><Shift>p'
+session-add-down='<Primary>Down'
+session-add-right='<Primary>Right'
+
+[profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
+background-color='#300A24'
+background-transparency-percent=0
+badge-color='#AC7EA8'
+badge-color-set=false
+bold-color-set=false
+cursor-colors-set=false
+dim-transparency-percent=0
+foreground-color='#FFFFFF'
+highlight-colors-set=false
+palette=['#2E3436', '#CC0000', '#4E9A06', '#C4A000', '#3465A4', '#75507B', '#06989A', '#D3D7CF', '#555753', '#EF2929', '#8AE234', '#FCE94F', '#729FCF', '#AD7FA8', '#34E2E2', '#EEEEEC']
+scrollback-lines=50000
+use-theme-colors=false
+visible-name='Default'
