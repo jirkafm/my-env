@@ -1,3 +1,4 @@
+" Tabs
 :set shiftwidth=2
 :set tabstop=2
 :set softtabstop=2
@@ -16,7 +17,23 @@ set fileencoding=utf-8                  " use utf-8 everywhere
 set termencoding=utf-8                  " use utf-8 everywhere
 
 
+" History
 set history=500                         " number of command lines stored in the history tables
 set undolevels=500                      " number of levels of undo
 
+" Misc
+set number
+filetype plugin indent on
+
 syntax on
+
+if empty(glob('~/.vim/autoload/plug.vim'))
+	    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+			        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+			          autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+	Plug 'vim-scripts/XML-Completion'
+	Plug 'junegunn/vim-plug'
+call plug#end()
