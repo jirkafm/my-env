@@ -1,0 +1,7 @@
+# To use common configuration in %APPDATA%\mintty, simply remove this file
+Transparency=off
+CursorType=block
+CursorBlinks=no
+BackgroundColour=69,84,115
+CursorColour=255,0,255
+Term=xterm-256color
