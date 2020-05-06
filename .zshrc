@@ -97,11 +97,15 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+findHere() {
+	find . -iname $@
+}
 findOpenInVim() {
 	find . -iname $@  -exec vi {} \;
 }
-alias f="find . -iname "
+alias f="findHere"
 alias fvi="findOpenInVim"
 
-LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
-LESS=' -R '
+#LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
+#LESS=' -R '
+alias dev="cd /mnt/c/Users/kaplbjir/Desktop/DEV"
