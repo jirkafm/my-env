@@ -23,6 +23,7 @@ set undolevels=500                      " number of levels of undo
 
 " Misc
 set number
+filetype plugin on
 filetype plugin indent on
 
 syntax on
@@ -32,6 +33,13 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 			        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 			          autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
+
+" XML formatter
+com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
+nnoremap = :FormatXML<Cr>
+" JSON formatter
+com! FormatJSON :%!python3 -m json.tool 
+nnoremap = :FormatJSON<Cr>
 
 call plug#begin('~/.vim/plugged')
 	Plug 'vim-scripts/XML-Completion'
@@ -112,4 +120,9 @@ call plug#begin('~/.vim/plugged')
 	"{{ TMux - Vim integration
 	Plug 'christoomey/vim-tmux-navigator'
 	"}}
+
+	"{{ TMux - Vim integration
+  Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+	"}}
+	
 call plug#end()
