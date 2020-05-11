@@ -104,7 +104,6 @@ call plug#begin('~/.vim/plugged')
 	"{{ Color-scheme
 	Plug 'morhetz/gruvbox'
 	set background=dark
-	colorscheme gruvbox
 	let g:gruvbox_contrast_dark='default'
 	"}}
 
@@ -126,3 +125,6 @@ call plug#begin('~/.vim/plugged')
 	"}}
 	
 call plug#end()
+
+" Vim color scheme
+colorscheme gruvbox
