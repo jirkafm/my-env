@@ -104,6 +104,7 @@ call plug#begin('~/.vim/plugged')
 	"{{ Color-scheme
 	Plug 'morhetz/gruvbox'
 	set background=dark
+	colorscheme gruvbox
 	let g:gruvbox_contrast_dark='default'
 	"}}
 
@@ -111,9 +112,9 @@ call plug#begin('~/.vim/plugged')
 	" ---> closing XML tags <---
 	Plug 'alvan/vim-closetag'
 	" ---> files on which to activate tags auto-closing <---
-	let g:closetag_filenames = '*.html,*.xhtml,*.xml,*.vue,*.phtml,*.js,*.jsx,*.coffee,*.erb'
+	"let g:closetag_filenames = '*.html,*.xhtml,*.xml,*.vue,*.phtml,*.js,*.jsx,*.coffee,*.erb'
 	" ---> closing braces and brackets <---
-	Plug 'jiangmiao/auto-pairs'
+	"Plug 'jiangmiao/auto-pairs'
 	"}}
 
 	"{{ TMux - Vim integration
@@ -124,7 +125,37 @@ call plug#begin('~/.vim/plugged')
   Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 	"}}
 	
-call plug#end()
+	"{{ Typescript support 
+  Plug 'leafgarland/typescript-vim'
+	"}}
 
-" Vim color scheme
-colorscheme gruvbox
+	"{{ Code formatting - web - post install (yarn install | npm install) then load plugin only for
+	" editing supported files
+	Plug 'prettier/vim-prettier', {
+	   \ 'do': 'npm install -g',
+	   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json',
+		 \				 'graphql', 'markdown', 'vue', 'yaml', 'html'] 
+	   \ }
+	let g:prettier#config#config_precedence = 'file-override'
+	autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript	
+	"}}
+	
+	"{{ Linting 
+	Plug 'dense-analysis/ale'
+
+	let g:ale_linters = {
+				\   'javascript': ['eslint'],
+				\   'typescript': ['tsserver', 'tslint'],
+				\   'vue': ['eslint']
+				\}
+
+	let g:ale_fixers = {
+				\    'javascript': ['eslint'],
+				\    'typescript': ['prettier'],
+				\    'vue': ['eslint'],
+				\    'scss': ['prettier'],
+				\    'html': ['prettier']
+				\}
+	let g:ale_fix_on_save = 1
+	"}}
+call plug#end()
