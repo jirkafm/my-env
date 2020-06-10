@@ -82,6 +82,9 @@ call plug#begin('~/.vim/plugged')
 
 	"{{ Configuring CtrlP
 	Plug 'ctrlpvim/ctrlp.vim'
+	let g:ctrlp_max_files = 0
+	let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+	set wildignore+=*/node_modules/**
 	"}}
 
 	"{{ Configuring UltiSnips
