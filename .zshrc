@@ -68,7 +68,7 @@ ZSH_THEME="mrtazz"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(docker colored-man-pages zsh-syntax-highlighting ssh-agent)
+plugins=(git docker colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,4 +108,7 @@ alias fvi="findOpenInVim"
 
 #LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
 #LESS=' -R '
-alias dev="cd /mnt/c/Users/kaplbjir/Desktop/DEV"
+
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+	  exec tmux
+fi
