@@ -10,6 +10,10 @@ window-style='disable-csd-hide-toolbar'
 app-preferences='<Primary><Shift>p'
 session-add-down='<Primary><Super>Down'
 session-add-right='<Primary><Super>Right'
+session-switch-to-terminal-down='<Alt><Super>Down'
+session-switch-to-terminal-left='<Alt><Super>Left'
+session-switch-to-terminal-right='<Alt><Super>Right'
+session-switch-to-terminal-up='<Alt><Super>Up'
 
 [profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
 background-color='#300A24'
