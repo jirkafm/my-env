@@ -35,7 +35,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 " XML formatter
-com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
+com! FormatXML :%!xmllint --format --recover -
 nnoremap = :FormatXML<Cr>
 " JSON formatter
 com! FormatJSON :%!python3 -m json.tool 
