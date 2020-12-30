@@ -106,8 +106,9 @@ findOpenInVim() {
 alias f="findHere"
 alias fvi="findOpenInVim"
 
-#LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
-#LESS=' -R '
+rscp() {
+	rsync -avvHPS --rsh='ssh' $@
+}
 
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 	  exec tmux
