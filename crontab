@@ -1,0 +1,9 @@
+30 9 * * * aplay $HOME/.jirkafm/my-env/bell.wav
+0 11 * * * aplay $HOME/.jirkafm/my-env/bell.wav
+0 12 * * * aplay $HOME/.jirkafm/my-env/bell.wav
+0 13 * * * aplay $HOME/.jirkafm/my-env/bell.wav
+0 14 * * * aplay $HOME/.jirkafm/my-env/bell.wav
+0 15 * * * aplay $HOME/.jirkafm/my-env/bell.wav
+0 16 * * * aplay $HOME/.jirkafm/my-env/bell.wav
+0 17 * * * aplay $HOME/.jirkafm/my-env/bell.wav
+0 18 * * * aplay $HOME/.jirkafm/my-env/bell.wav
