@@ -105,6 +105,7 @@ findOpenInVim() {
 }
 alias f="findHere"
 alias fvi="findOpenInVim"
+alias xclip="/usr/bin/xclip -selection clipboard"
 
 rscp() {
 	rsync -avvHPS --rsh='ssh' $@
