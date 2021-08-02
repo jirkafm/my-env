@@ -1,5 +1,5 @@
 if [[ `grep 'master'` ]]; then 
-  echo "You really don't want to push this branch. Aborting."
+  echo "You really don't want to push into this branch. Aborting."
   exit 1
 fi
 
