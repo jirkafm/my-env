@@ -5,6 +5,9 @@
 :set autoindent
 :set smartindent
 
+" Clipboard
+set clipboard+=unnamed
+
 " Searching
 set hlsearch                            " highlight search terms
 set incsearch                           " show search matches as you type
@@ -124,10 +127,6 @@ call plug#begin('~/.vim/plugged')
 	Plug 'christoomey/vim-tmux-navigator'
 	"}}
 
-	"{{ TMux - Vim integration
-  Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
-	"}}
-	
 	"{{ Typescript support 
   Plug 'leafgarland/typescript-vim'
 	"}}
